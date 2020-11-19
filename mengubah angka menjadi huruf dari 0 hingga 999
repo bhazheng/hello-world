@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+public class coba {
+    public static void main(String[] args) {
+        Scanner in = new Scanner (System.in);
+        int angka = in.nextInt();
+        int ratusan = angka/100;
+        int belasan = angka %100;
+        int puluhan = (angka %100)/10;
+        int satuan= (angka%10);
+        if (angka>=0 && angka<=999) {
+            if (angka==0) {
+                System.out.print("nol");
+            }if (ratusan==1) {
+                System.out.print("seratus ");
+            }if (ratusan==2) {
+                System.out.print("dua ratus ");
+            }if (ratusan==3) {
+                System.out.print("tiga ratus ");
+            }if (ratusan==4) {
+                System.out.print("empat ratus ");
+            }if (ratusan==5) {
+                System.out.print("lima ratus ");
+            }if (ratusan==6) {
+                System.out.print("enam ratus ");
+            }if (ratusan==7) {
+                System.out.print("tujuh ratus ");
+            }if (ratusan==8) {
+                System.out.print("delapan ratus ");
+            }if (ratusan==9) {
+                System.out.print("sembilan ratus ");
+            }if (puluhan==1 && belasan%10==0) {
+                System.out.print("sepuluh ");
+            }if (puluhan==2) {
+                System.out.print("dua puluh ");
+            }if (puluhan==3) {
+                System.out.print("tiga puluh ");
+            }if (puluhan==4) {
+                System.out.print("empat puluh ");
+            }if (puluhan==5) {
+                System.out.print("lima puluh ");
+            }if (puluhan==6) {
+                System.out.print("enam puluh ");
+            }if (puluhan==7) {
+                System.out.print("tujuh puluh ");
+            }if (puluhan==8) {
+                System.out.print("delapan puluh ");
+            }if (puluhan==9) {
+                System.out.print("sembilan puluh ");
+            }if (belasan==11) {
+                System.out.print("sebelas");
+            }if (satuan==1 && belasan!=11) {
+                System.out.print("satu ");
+            }if (satuan==2) {
+                System.out.print("dua ");
+            }if (satuan==3) {
+                System.out.print("tiga ");
+            }if (satuan==4) {
+                System.out.print("empat ");
+            }if (satuan==5) {
+                System.out.print("lima ");
+            }if (satuan==6) {
+                System.out.print("enam ");
+            }if (satuan==7) {
+                System.out.print("tujuh ");
+            }if (satuan==8) {
+                System.out.print("delapan ");
+            }if (satuan==9) {
+                System.out.print("sembilan ");
+            }if (puluhan==1 && belasan!=10 && belasan!=11 && puluhan<2) {
+                System.out.print("belas");
+            }
+            
+        }
+        
+    }
+}
