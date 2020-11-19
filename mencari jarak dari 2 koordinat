@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int x1,y1,x2,y2,e,f;
+        x1 = in.nextInt();
+        y1 = in.nextInt();
+        x2 = in.nextInt();
+        y2 = in.nextInt();
+        e = ((x1)-(x2)); f = ((y1)-(y2));
+        if (e<0){
+            e *= -1;
+        }if (f<0){
+            f *= -1;
+        }System.out.println((e)+(f));
+        
+
+    }
+}
