@@ -1,0 +1,49 @@
+import java.util.*;
+public class perkalianmatrix {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        //perkalian matriks 3x3
+        //matriks a
+        int[][] a = new int[3][3]; int[][] b = new int[3][3];int[][] c = new int[3][3];
+        //matriks b
+        System.out.println("Perkalian Matriks 3x3");
+        System.out.println("======Masukkan input======");
+        System.out.println("matriks A");
+        for (int j = 0; j < a.length; j++) {
+            for (int j2 = 0; j2 < a.length; j2++) {
+                a[j][j2] = in.nextInt();          
+            }
+        }
+        System.out.println();
+        System.out.println("Matriks B");    
+        for (int j = 0; j < b.length; j++) {
+            for (int j2 = 0; j2 < b.length; j2++) {
+                b[j][j2] = in.nextInt();
+            }       
+        }
+        System.out.println();
+        System.out.println("Output matriks A");
+        for (int j = 0; j < a.length; j++) {
+            for (int j2 = 0; j2 < a.length; j2++) {
+                System.out.print(a[j][j2]+" ");
+            }System.out.println();   
+        }
+        System.out.println();
+        System.out.println("Output matriks B");    
+        for (int j = 0; j < b.length; j++) {
+            for (int j2 = 0; j2 < b.length; j2++) {
+                System.out.print(b[j][j2]+" ");
+            }System.out.println();
+        }
+        System.out.println();
+        System.out.println("Hasil perkalian matriks");
+        for (int j = 0; j < c.length; j++) {           
+            for (int j2 = 0; j2 < c.length; j2++) {
+                c[j][j2]= a[j][0] * b[0][j2] + a[j][1] * b[1][j2] + a[j][2] * b[2][j2];
+                System.out.print(c[j][j2]+" ");
+            }System.out.println();
+        }
+
+    }
+
+}
