@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class kedua {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a = 1;
+        do {
+            System.out.printf("Pilih operasi : %n1->Mengurutkan data %n2->Menghitung rata-rata %n0->Berhenti %n");
+            System.out.print("Masukkan operasi : ");
+            a = in.nextInt();
+            if (a==1 || a==2) {
+                System.out.print("Jumlah data yang di input : ");
+                int b = in.nextInt();
+                int[] c = new int[b];
+                System.out.print("Masukkan data : ");
+                for (int i = 0; i < c.length; i++) {
+                    c[i] = in.nextInt();
+                }if (a==1) {
+                    Arrays.sort(c);
+                    System.out.print("Hasil array yang telah diurutkan : ");
+                    System.out.println(Arrays.toString(c));
+                    System.out.printf("Pilih operasi : %n1->Program kembali %n2->Menghitung rata-rata %n0->Berhenti %n");
+                    a = in.nextInt();   
+                }
+                if(a==2){
+                    double e = 0;
+                    for (int i = 0; i < c.length; i++) {
+                        e+=c[i];
+                    }
+                    double f =e /b;
+                    System.out.println("Hasil rata-rata = "+f);
+                }
+            
+            } if(a==0) {
+                System.out.println("Program berhenti");
+            }
+        } while (a!=0);
+    }
+}
