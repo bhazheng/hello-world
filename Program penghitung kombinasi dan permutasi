@@ -1,0 +1,54 @@
+import java.util.*;
+
+public class App {
+    public static int urutkan(int satu, int dua){
+        int e = 1;int z = 1; int m = 1;
+        for (int i = satu; i > 0; i--) {
+            e *= i;
+        }for (int i = satu-dua; i > 0; i--) {
+            z *= i;
+        }for (int i = dua; i > 0; i--) {
+            m *= i;
+        }
+        return e / (z*m);
+    }
+    public static int itungRataRata(int satu,int dua) {
+        int e = 1;int z = 1;
+        for (int i = satu; i > 0; i--) {
+            e *= i;
+        }for (int i = satu-dua; i > 0; i--) {
+            z *= i;
+        }
+            
+        return e / z;
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.printf("Program penghitung Kombinasi dan Permutasi %n1. Menghitung Permutasi %n2. Menghitung Kombinasi %n3. Keluar %n");
+        System.out.print("Masukkan pilihan anda : ");
+        int a = in.nextInt();
+        while (a==1 || a==2) {
+            System.out.print("Masukkan nilai n : ");
+            int satu = in.nextInt();
+            System.out.print("Masukkan nilai r : ");
+            int dua = in.nextInt();
+            if (a==1 || a==2) {
+                }if (a==1) {
+                    System.out.println("        n");
+                    System.out.println("nPr = ------ = "+itungRataRata(satu, dua));
+                    System.out.println("      (n-r)!");
+                    System.out.println("Maka hasil permutasinya adalah : "+itungRataRata(satu, dua));   
+                }
+                if(a==2){
+                    System.out.println("           n");
+                    System.out.println("nPr = ----------- = "+urutkan(satu, dua));
+                    System.out.println("      (n-r)! x r!");
+                    System.out.println("Maka hasil kombinasinya adalah : "+urutkan(satu, dua)); 
+                }
+                System.out.printf("Program penghitung Kombinasi dan Permutasi %n1. Menghitung Permutasi %n2. Menghitung Kombinasi %n3. Keluar %n");
+                System.out.print("Masukkan pilihan anda : ");
+                a = in.nextInt();
+            }
+        }
+        
+    }
