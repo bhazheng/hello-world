@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int[]data = new int [a];
+        int modusTerbesar = 0; int poin1 = 0; int poin2=0;
+        for(int i =0; i<a ;i++){
+            data[i] = in.nextInt();
+        }
+        Arrays.sort(data);
+        for(int i=0;i<a;i++){
+            poin1=0;
+            for(int j=0;j<a;j++){
+                if(data[i]==data[j]){
+                    poin1++;
+                    if(i==0){
+                        poin2=poin1;
+                    }
+                }
+            }
+            if(poin2<=poin1){
+                poin2=poin1;
+                modusTerbesar=data[i];
+            // System.out.println(poin1);
+            }
+        }
+        System.out.println(modusTerbesar);
+    }
+}
