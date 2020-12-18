@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a= in.nextInt();int b = in.nextInt();//baris pertama
+        double d[] = new double[a];String e[]=new String[a];double z;//baris kedua
+        double v;double rata=0;//operasi
+        double max=0;String maxnama="";double rataanak=0;
+        for(int i=0;i<a;i++){
+            e[i]=in.next();
+            for(int j=0;j<b;j++){
+                z= in.nextDouble();
+                rataanak+=z;
+            }v=rataanak/b;
+            d[i]=v;
+            rata +=d[i];
+            System.out.println("Rata-rata nilai mahasiswa "+e[i]+" adalah "+d[i]);
+            rataanak=0;
+        }
+        max=d[0];maxnama=e[0];
+        for(int i =0; i<a;i++){
+            if(d[i]>max){
+                max=d[i];
+                maxnama=e[i];
+            }
+        }
+        System.out.println("Rata-rata kelas: "+rata/a);
+        System.out.println("Mahasiswa yang memiliki nilai tertinggi adalah "+maxnama+" dengan nilai "+max);
+    }   
+}
